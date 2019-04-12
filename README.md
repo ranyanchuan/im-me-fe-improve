@@ -1,8 +1,8 @@
 # 贵冶项目前端开发中的一些技巧
 
-##### undefined 后跟着 . 回报 Uncaught TypeErro 错
+##### 1. undefined 后跟着 . 回报 Uncaught TypeErro 错
 
-> 反例
+反例
 ```js
 let listRow = {
     id: row.values.id.value,    //异常记录id
@@ -20,7 +20,7 @@ let listRow = {
 ```
 ***
 #####  大对象下 又是大对象  又是大对象 又是大对象 解构代码
-> 反例
+反例
 ```js
 let listRow = {
     id: row.values.id.value,    //异常记录id
@@ -32,7 +32,7 @@ let listRow = {
 }
 
 ```
-> 正例
+正例
 公共方法抽取
 ```js
 /**
@@ -79,9 +79,9 @@ let listRow =objDctValue(values,'value');
 ```
 ***
 
-> map 遍历返回的是一个数组，如果一个值的之后不会再改变 推荐使用 const 声明
+##### map 遍历返回的是一个数组，如果一个值的之后不会再改变 推荐使用 const 声明
 
-##### 反例
+反例
 ```js
 const list=[];
 rows.map((row) => {

@@ -1,6 +1,6 @@
 # 贵冶项目前端开发中的一些技巧
 
-##### 1、undefined 后跟着 . 回报 Uncaught TypeErro 错
+##### 1、undefined 后跟着 `.` 会报 Uncaught TypeErro 错
 
 `反例`
 ```js
@@ -19,7 +19,7 @@ let listRow = {
 }
 ```
 ***
-#####  2、 解构代码 row 对象下的value
+#####  2、 解构代码 `row` 对象下的 `value`
 `反例`
 ```js
 let listRow = {
@@ -77,7 +77,7 @@ let listRow =objDctValue(values,'value');
 
 ```
 ***
-##### 3、rows数组解构， map 遍历本身返回的是一个数组，如果一个变量的值之后不会再改变 推荐使用 const 声明
+##### 3、`rows` 数组解构， `map` 遍历本身返回的是一个数组，如果一个变量的值之后不会再改变 推荐使用 `const` 声明
 
 `反例`
 ```js

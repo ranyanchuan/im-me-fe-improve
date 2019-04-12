@@ -1,6 +1,6 @@
 # 贵冶项目前端开发中的一些技巧
 
-## undefined 后跟着 . 回报 Uncaught TypeErro 错
+##### undefined 后跟着 . 回报 Uncaught TypeErro 错
 
 > 反例
 ```js
@@ -9,7 +9,7 @@ let listRow = {
 }
 ```
 
-##### 正例
+> 正例
 ```js
 const {values={}}=row; // 添加默认值 
 const {id={}}=values;

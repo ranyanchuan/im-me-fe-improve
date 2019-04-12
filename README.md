@@ -166,3 +166,19 @@ const list=rows.map((row) => {
 }
 </div>
 ```
+#### 5、import 引入地方库
+`反例`
+
+```js
+import zhCN from "../../../../../node_modules/rc-calendar/lib/locale/zh_CN";
+import '../../../../../node_modules/bee-datepicker/build/DatePicker.css';
+```
+
+`正例`
+```js
+import zhCN from "rc-calendar/lib/locale/zh_CN";
+import 'bee-datepicker/build/DatePicker.css';
+```
+
+
+

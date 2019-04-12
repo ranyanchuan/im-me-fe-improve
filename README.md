@@ -60,13 +60,10 @@ export function objDctValue(data,childrenKey) {
         for (const key in data) {
             let value = "";
             let display="";
-            // 判断值对象是否有 value 属性
-            if (data[key] && data[key].value) {
-                value = data[key].value || "";
-            }
-            // 判断值对象是否有 dispaly 属性
-            if (data[key] && data[key].display) {
-                display = data[key].value || "";
+            // 判断值对象是否有 value 或者 display 属性
+            if (data[key] && (data[key].value || data[key].display)) {
+                value = data[key].value || '';
+                display = data[key].dispaly || '';
             }
             result[key] = value; // 值
             result[key+'_name'] = display; // 名称

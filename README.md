@@ -19,7 +19,7 @@ let listRow = {
 }
 ```
 ***
-#####  2、row 对象 解构代码
+#####  2、 解构代码 row 对象下的value
 `反例`
 ```js
 let listRow = {
@@ -77,7 +77,7 @@ let listRow =objDctValue(values,'value');
 
 ```
 ***
-##### map 遍历返回的是一个数组，如果一个值的之后不会再改变 推荐使用 const 声明
+##### 3、rows数组解构， map 遍历本身返回的是一个数组，如果一个变量的值之后不会再改变 推荐使用 const 声明
 
 `反例`
 ```js

@@ -115,3 +115,53 @@ const list=rows.map((row) => {
     return objDctValue(values):
 })
 ```
+
+####  tootip 传参问题 数组迭代问题
+`反例`
+```js
+<div className='dross un-slagnormal'>
+{
+    aisle.map((a) => {
+        return (
+            <p key={a.index} className='dross-item'>
+                <span className='slag-num'>{a.index + 1}</span>
+                <Tooltip
+                    overlay={
+                        this.tootip({
+                            pk_slagnum_name: a.pk_slagnum_name,
+                            intime: a.intime,
+                            watertiom: a.watertiom,
+                            status: a.status,
+                        })
+                    }
+                    placement="right"
+                >
+                    <span className='slag-pos' style={{ background: colorArr[a.status] }}>{a.pk_slagnum_name}</span>
+                </Tooltip>
+
+            </p>
+        )
+    })
+}
+</div>
+```
+
+`正例`
+```js
+<div className='dross un-slagnormal'>
+{
+    // 判断是否是数组
+    Array.isArray(aisles) &&  aisles.map((aisle) => {
+    const {status,pk_slagnum_name,index}=aisle || {};
+        return (
+            <p key={index} className='dross-item'>
+                <span className='slag-num'>{index + 1}</span>
+                <Tooltip overlay={this.tootip(aisle)} placement="right" >
+                 <span className='slag-pos' style={{ background: colorArr[status] }}>{pk_slagnum_name}</span>
+                </Tooltip>
+            </p>
+        )
+    })
+}
+</div>
+```

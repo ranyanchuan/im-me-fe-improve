@@ -1,8 +1,8 @@
 # 贵冶项目前端开发中的一些技巧
 
-> undefined 后跟着 . 回报 Uncaught TypeErro 错
+##### undefined 后跟着 . 回报 Uncaught TypeErro 错
 
-##### 反例
+> 反例
 ```js
 let listRow = {
     id: row.values.id.value,    //异常记录id

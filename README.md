@@ -166,7 +166,7 @@ const list=rows.map((row) => {
 }
 </div>
 ```
-#### 5、import 引入地方库
+#### 5、import 引入地三方库
 `反例`
 
 ```js

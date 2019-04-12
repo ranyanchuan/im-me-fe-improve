@@ -2,14 +2,14 @@
 
 ##### 1. undefined 后跟着 . 回报 Uncaught TypeErro 错
 
-反例
+`反例`
 ```js
 let listRow = {
     id: row.values.id.value,    //异常记录id
 }
 ```
 
-> 正例
+`正例`
 ```js
 const {values={}}=row; // 添加默认值 
 const {id={}}=values;

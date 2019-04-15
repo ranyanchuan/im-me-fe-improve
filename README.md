@@ -180,5 +180,28 @@ import zhCN from "rc-calendar/lib/locale/zh_CN";
 import 'bee-datepicker/build/DatePicker.css';
 ```
 
-aaa
+#### 6、npm run dev 时报如下错误提示
+```bash
+(node:1679) DeprecationWarning: Tapable.plugin is deprecated. Use new API on `.hooks` instead
+events.js:167
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 127.0.0.1:3000
+    at Server.setupListenHandle [as _listen2] (net.js:1286:14)
+    at listenInCluster (net.js:1334:12)
+    at GetAddrInfoReqWrap.doListen [as callback] (net.js:1460:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:62:10)
+Emitted 'error' event at:
+    at emitErrorNT (net.js:1313:8)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! im-am@1.0.0 dev: `webpack-dev-server --mode development --progress`
+npm ERR! Exit status 1
+
+```
+
+`原因` 端口被暂用，杀掉就可以了
+
 
